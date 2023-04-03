@@ -1,11 +1,10 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 
 '''an asynchronous coroutine that
 takes in an integer argument'''
 
 import asyncio
 import random
-from typing import Callable
 
 
 async def wait_random(max_delay: int = 10) -> float:
