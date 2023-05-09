@@ -10,3 +10,6 @@ Async/await, coroutines
 - [0x02. Python - Async Comprehension](./0x02-python_async_comprehension)
 Asynchronous generators, async comprehensions.
 type-annotate generators
+
+- [0x03. Unittests and Integration Tests](./0x03-Unittests_and_integration_tests)
+Difference between unittests and integration tests
