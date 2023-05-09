@@ -53,3 +53,30 @@ class TestGetJson(unittest.TestCase):
         with patch("requests.get") as MockClass:
             MockClass.return_value = Mocked()
             self.assertEqual(get_json(test_url), test_payload)
+
+
+class TestMemoize(unittest.TestCase):
+    '''unittest for memoize'''
+
+    def test_memoize(self):
+        '''unittest for memoize'''
+
+        class TestClass:
+            '''class for test'''
+
+            def example_method(self):
+                '''returns 42'''
+
+                return 42
+
+            @memoize
+            def example_property(self):
+                '''returns example_method'''
+
+                return self.example_method()
+
+        with patch.object(TestClass, 'example_method') as mocked:
+            spec = TestClass()
+            spec.example_property
+            spec.example_property
+            mocked.asset_called_once()
